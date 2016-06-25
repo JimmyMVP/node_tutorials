@@ -1,5 +1,4 @@
 express = require("express")
-require("babel/register")
 //Include react transpiler
 react = require("express-react-views")
 server = express()
@@ -7,6 +6,8 @@ server = express()
 
 server.engine("jsx", react.createEngine())
 server.set("view engine", "jsx")
+
+server.set("views", __dirname + "/components")
 
 
 
