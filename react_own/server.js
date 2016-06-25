@@ -1,11 +1,12 @@
 express = require("express")
+//Include react transpiler
+react = require("express-react-views")
 server = express()
 
-hbs = require("express-hbs")
 
-server.engine("hbs", hbs.express4({partialsDir : __dirname + "views/partials"}))
+server.engine("jsx", react.createEngine())
+server.set("view engine", "jsx")
 
-server.set("view engine", "hbs")
 
 
 server.get("/", (req, resp) => {
