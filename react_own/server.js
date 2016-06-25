@@ -1,4 +1,5 @@
 express = require("express")
+require("babel/register")
 //Include react transpiler
 react = require("express-react-views")
 server = express()
