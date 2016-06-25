@@ -12,7 +12,7 @@ server.set("view engine", "jsx")
 server.get("/", (req, resp) => {
 
 	resp.status(200)
-	resp.send("<h1>You are a genious!</h2>")
+	resp.render("index")
 
 })
 
